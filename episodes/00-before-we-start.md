@@ -23,7 +23,8 @@ exercises: 0
 ## What is Python?
 
 Python is a general purpose programming language that supports rapid development of data analytics
-applications.  The word "Python" is used to refer to both, the programming language and the tool
+applications. In addition Python is the most widely used programming language in the Geospatial domain.
+The word "Python" is used to refer to both, the programming language and the tool
 that executes the scripts written in Python language.
 
 Its main advantages are:
@@ -39,7 +40,7 @@ Its main advantages are:
 *So, why do you need Python for data analysis?*
 
 - **Easy to learn:**
-  Python is easier to learn than other programming languages. This is important because lower barriers
+  Python is said to be easier to learn than other programming languages. This is important because lower barriers
   mean it is easier for new members of the community to get up to speed.
 
 - **Reproducibility:**
@@ -48,8 +49,11 @@ Its main advantages are:
   Data analysis written as a Python script can be reproduced on any platform.  Moreover, if you
   collect more or correct existing data, you can quickly re-run your analysis!
   
-  An increasing number of journals and funding agencies expect analyses to be reproducible,
-  so knowing Python will give you an edge with these requirements.
+  An increasing number of academic journals and funding agencies expect analyses to be reproducible. Also when you 
+  are working as a GIS expert you do not want to rerun your models over and over again by clicking on certain buttons and tools.
+  In addition, once you learn the python ecosystem you will notice that you can integrate all kind of data analysis and methods
+  from other domains allowing you really boost your analysis and data processing toolbox. 
+  Knowing Python will give you an edge with these requirements and opens a world of opportunities.
 
 - **Versatility:**
   Python is a versatile language that integrates with many existing applications to enable something
@@ -142,7 +146,10 @@ You can recognise a code cell by the `In[ ]:` at the beginning of the cell and o
 Pressing the **\+** button in the menu bar will add a new cell.
 All your commands as well as any output will be saved with the notebook.
 
+
 #### If you are working with Spyder:
+
+*Which we are not going to do, so consider this a reference if you ever want to use Spyder*
 
 You can either use the console or use script files (plain text files that contain your code).  The
 console pane (in Spyder, the bottom right panel) is the place where commands written in the Python
@@ -181,13 +188,9 @@ happens, and you thought you finished typing your command, click inside the cons
 
 ## How to learn more after the workshop?
 
-The material we cover during this workshop will give you an initial taste of how you can use Python
-to analyze data for your own research. However, you will need to learn more to do advanced
-operations such as cleaning your dataset, using statistical methods, or creating beautiful graphics.
-The best way to become proficient and efficient at Python, as with any other tool, is to use it to
-address your actual research questions. As a beginner, it can feel daunting to have to write a
-script from scratch, and given that many people make their code available online, modifying existing
-code to suit your purpose might make it easier for you to get started.
+The material we cover during this self study will give you an initial taste of how you can use Python
+to analyze data for your own research. It will give you sufficient knowledge to start the Introduction to 
+Geospatial Raster and Vector data workshop of the Geographic Information Science Master program. 
 
 ## Seeking help
 
@@ -199,7 +202,7 @@ code to suit your purpose might make it easier for you to get started.
 
 Finally, a generic Google or internet search "Python task" will often either send you to the
 appropriate module documentation or a helpful forum where someone else has already asked your
-question.
+question. 
 
 I am stuck... I get an error message that I don't understand.
 Start by googling the error message. However, this doesn't always work very well, because often,
@@ -211,6 +214,10 @@ in your query.
 However, you should check Stack Overflow. Search using the `[python]` tag. Most questions have already
 been answered, but the challenge is to use the right words in the search to find the answers:
 [https://stackoverflow.com/questions/tagged/python?tab=Votes][so-python]
+
+You can also choose to use ChatGPT, however be aware of the energy cost and a tool that
+directly povides you with the answer might not be very helpfull in a learning proces. It is up to you!
+
 
 ### Asking for help
 
@@ -239,6 +246,7 @@ instead of using a subset of your real dataset, create a small (3 columns, 5 row
   chances are you will get an answer in less than 5 min. Remember to follow their guidelines on how to
   ask a good question.
 - [Python mailing lists][python-mailing-lists]
+- ChatGPT or similar generative AI models.
 
 ## More resources
 

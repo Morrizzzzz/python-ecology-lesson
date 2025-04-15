@@ -76,13 +76,13 @@ Hello World
 One of the most basic things we can do in Python is assign values to variables:
 
 ```python
-text = "Data Carpentry"  # An example of assigning a value to a new text variable,
-                         # also known as a string data type in Python
-number = 42              # An example of assigning a numeric value, or an integer data type
-pi_value = 3.1415        # An example of assigning a floating point value (the float data type)
+text = "GIS"              # An example of assigning a value to a new text variable,
+                          # also known as a string data type in Python
+number = 42               # An example of assigning a numeric value, or an integer data type
+coordinate = 52.377956    # An example of assigning a floating point value (the float data type)
 ```
 
-Here we've assigned data to the variables `text`, `number` and `pi_value`,
+Here we've assigned data to the variables `text`, `number` and `coordinate`,
 using the assignment operator `=`. To review the value of a variable, we
 can type the name of the variable into the interpreter and press <kbd>Return</kbd>:
 
@@ -91,7 +91,7 @@ text
 ```
 
 ```output
-"Data Carpentry"
+"GIS"
 ```
 
 Everything in Python has a type. To get the type of something, we can pass it
@@ -114,7 +114,7 @@ type(number)
 ```
 
 ```python
-type(pi_value)
+type(coordinate)
 ```
 
 ```output
@@ -132,7 +132,7 @@ print(text)
 ```
 
 ```output
-Data Carpentry
+GIS
 ```
 
 ```python
@@ -151,7 +151,7 @@ This may seem redundant, but in fact it's the only way to display output in a sc
 # A Python script file
 # Comments in Python start with #
 # The next line assigns the string "Data Carpentry" to the variable "text".
-text = "Data Carpentry"
+text = "GIS"
 
 # The next line does nothing!
 text
@@ -167,10 +167,10 @@ $ python example.py
 ```
 
 ```output
-Data Carpentry
+GIS
 ```
 
-Notice that "Data Carpentry" is printed only once.
+Notice that "GIS is printed only once.
 
 **Tip**: `print` and `type` are built-in functions in Python. Later in this
 lesson, we will introduce methods and user-defined functions.
@@ -524,12 +524,12 @@ values to keys in a dictionary, by showing another example with a value
 completely unrelated to the current contents of the dictionary, e.g.
 
 ```python
-rev[2] = "apple-sauce"
+rev[2] = "Amsterdam"
 print(rev)
 ```
 
 ```output
-{1: 'one', 2: 'apple-sauce', 3: 'three'}
+{1: 'one', 2: 'Amsterdam', 3: 'three'}
 ```
 
 :::::::::::::::::::::::::::::::::::
