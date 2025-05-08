@@ -25,179 +25,168 @@ which will give you everything in a single compressed file. You'll need to unzip
 this file after downloading it.
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+## Software Setup
 
-::::::::::::::::::::::::::::::::::::::::::  prereq
-
-## Installing Python using Anaconda
-
-[Python][python] is a popular language for scientific computing, and great for
-general-purpose programming as well. Installing all of the scientific packages we use in the lesson
-individually can be a bit cumbersome, and therefore recommend the all-in-one
-installer [Anaconda][anaconda].
+### Installing Python Using Anaconda
+For this workshop we are going to use the all-in-one installer [Anaconda][anaconda]. 
+If you already used python before it is fine to use another distrubution, 
+but make sure to have the right packages installed.
 
 Regardless of how you choose to install it, please make sure you install Python
-version 3.x (e.g., 3.10 is fine and will continue to receive security patches unitl 2026-OCT-04).
+version 3.x (e.g., 3.9 is fine). Also, please set up your python environment at
+least a day in advance of the workshop.  If you encounter problems with the
+installation procedure, ask your workshop organizers via e-mail for assistance so
+you are ready to go as soon as the workshop begins.
+
+::::::::::::::::::::::::::::::::::::::: discussion
+
+### Installing Anaconda
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::: solution
+
+### Windows
+
+[Video tutorial][video-windows]
+
+1. Open [https://www.anaconda.com/download][anaconda-windows] with your web browser.
+
+2. Download the Anaconda for Windows installer with Python 3.
+
+3. Install Python 3 by running the Anaconda Installer, using all of the defaults for installation *except* make sure that:
+  * **Register Anaconda as my default Python 3.x** option is checked (it should be in the latest version of Anaconda).
+  * **Add Anaconda to my PATH environment variable** is selected.
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::
 
-:::::::::::::::::::: discussion
+:::::::::::::::: solution
 
-## Installing Anaconda
+### Mac OS
 
-Select your operating system from the options below.
+[Video tutorial][video-mac]
 
-:::::::::::::::::::::::::::::::::
+1. Open [https://www.anaconda.com/download][anaconda-mac] with your web browser.
 
-:::::::::::: solution
+2. Download the Anaconda installer with Python 3 for OS X. These instructions assume that you use the "Graphical Installer" `.pkg` file
 
-### Windows {#anaconda-windows}
+3. Follow the Python 3 installation instructions. Make sure that the install location is set to **Install only for me** so Anaconda will install its files locally, relative to your home directory. Installing the software for all users tends to create problems in the long run and should be avoided.
 
-1. Open [https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual) in your web browser.
+:::::::::::::::::::::::::
 
-2. Download the Anaconda Python 3 installer for Windows.
 
-3. Double-click the executable and install Python 3 using the recommended settings.
-  Make sure that **Register Anaconda as my default Python 3.x** option is checked --
-  it should be in the latest version of Anaconda.
+:::::::::::::::: solution
 
-4. Verify the installation:
-  click Start, search and select `Anaconda Prompt` from the menu.
-  A window should pop up where you can now type commands
-  such as checking your Conda installation with:
-  
-  ```bash
-  conda --help
-  ```
+### Linux
 
-::::::::::::
-
-:::::::::::: solution
-
-### MacOS {#anaconda-macos}
-
-1. Visit [https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual) in your web browser.
-
-2. Download the Anaconda Python 3 installer for macOS.
-  These instructions assume that you use the graphical installer `.pkg` file.
-
-3. Follow the Anaconda Python 3 installation instructions.
-  Make sure that the install location is set to "Install only for me"
-  so Anaconda will install its files locally, relative to your home directory.
-  Installing the software for all users tends to create problems in the long run
-  and should be avoided.
-
-4. Verify the installation:
-  click the Launchpad icon in the Dock, type Terminal in the search field, then click Terminal.
-  A window should pop up where you can now type commands
-  such as checking your conda installation with:
-  
-  ```bash
-  conda --help
-  ```
-
-::::::::::::
-
-:::::::::::: solution
-
-### Linux {#anaconda-linux}
-
-Note that the following installation steps require you to work from the terminal (shell).
+Note that the following installation steps require you to work from the shell.
 If you run into any difficulties, please request help before the workshop begins.
 
-1. Open [https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual) in your web browser.
+1. Open [https://www.anaconda.com/download][anaconda-linux] with your web browser.
 
-2. Download the Anaconda Python 3 installer for Linux.
+2. Download the Anaconda installer with Python 3 for Linux.
 
-3. Install Anaconda using all of the defaults for installation.
-  
-  - Open a terminal window.
-  - Navigate to the folder where you downloaded the installer.
-  - Type `bash Anaconda3-` and press <kbd>Tab</kbd>.
-    The name of the file you just downloaded should appear.
-  - Press <kbd>Return</kbd>
-  - Follow the text-only prompts.  When the license agreement appears (a colon
-    will be present at the bottom of the screen) press <kbd>Spacebar</kbd> until you see the
-    bottom of the text. Type `yes` and press <kbd>Return</kbd> to approve the license. Press
-    <kbd>Return</kbd> again to approve the default location for the files. Type `yes` and
-    press <kbd>Return</kbd> to prepend Anaconda to your `PATH` (this makes the Anaconda
-    distribution your user's default Python).
+3. Open a terminal window and navigate to the directory where the executable is downloaded (e.g., `cd ~/Downloads`).
 
-4. Verify the installation:
-  this depends a bit on your Linux distribution, but often you will have an Applications listing
-  in which you can select a Terminal icon you can click. A window should pop up where you can now
-  type commands such as checking your conda installation with:
+4. Type:
+
+   ```bash
+   bash Anaconda3-
+   ```
+
+   and press "Tab" to autocomplete the full file name. The name of file you just downloaded should appear.
+
+5. Press "Enter" (or "Return" depending on your keyboard).
+
+6. Follow the text-only prompts.  When the license agreement appears (a colon will be present at the bottom of the screen) press "Spacebar" until you see the bottom of the text. Type `yes` and press "Enter" to approve the license. Press "Enter" again to approve the default location for the files. Type `yes` and press "Enter" to prepend Anaconda to your `PATH` (this makes the Anaconda distribution your user's default Python).
+
+7. Close the terminal window.
+
+:::::::::::::::::::::::::
+
+
+### Setting up the workshop environment
+
+If Anaconda was properly installed, you should have access to the `conda`
+command in your terminal (use the **Anaconda prompt** on **Windows**).
+
+**Note that packages are installed which are not used in this self study material. However since this self study material is meant to prepare for [this](https://esciencecenter-digital-skills.github.io/geospatial-python/) material it 
+has been decided to let learners install everything already at this stage. 
+
+
+
+1. Test that `conda` is correctly installed by typing:
+
+   ```bash
+   conda --version
+   ```
+
+   which should print the version of conda that is currently installed, e.g. :
+
+   ```output
+   conda 22.9.0
+   ```
+
+2. Run the following command:
+
+   ```bash
+   conda install -c conda-forge mamba
+   ```
+
+   IMPORTANT: If your terminal responds to the above command with `conda: command not found` see the [Troubleshooting section](#troubleshooting-conda-command-not-found).
+
+3. Create the Python environment for the workshop by running:
+  Download the [environment.yml](../episodes/files/environment.yml)
+  file by right-clicking the link and selecting save as. In the directory where you downloaded the environment.yml file run:
   
   ```bash
-  conda --help
+  conda env create -n geospatial -f environment.yml
   ```
+  Note that this step can take several minutes.
 
-::::::::::::
+4. When installation has finished you should see the following message in the terminal:
 
-## Required Python Packages
+   ```output
+   # To activate this environment, use
+   #    $ conda activate geospatial
+   #
+   # To deactivate an active environment, use
+   #    $ conda deactivate
+   ```
 
-The following are packages needed for this workshop:
+5. Now Activate the `geospatial` environment by running:
 
-- [Pandas](https://pandas.pydata.org/)
-- [Jupyter notebook][jupyter]
-- [Numpy](https://numpy.org/)
-- [Matplotlib](https://matplotlib.org/)
-- [Plotnine](https://plotnine.readthedocs.io/en/stable/)
+   ```bash
+   conda activate geospatial
+   ```
 
-All packages apart from `plotnine` will have automatically been installed with Anaconda
-and we can use Anaconda as a package manager to install the missing `plotnine` package:
-You need to open up a *Terminal*, if you are using Mac OSX, or Linux (see instructions above),
-or launch an *anaconda-prompt*, if you are using Windows. In your terminal window type the following:
-
-```bash
-conda install -y -c conda-forge plotnine
-```
-
-This will then install the latest version of plotnine into your conda environment.
-
-## Required packages: Miniconda
-
-Miniconda is a lightweight version of Anaconda. If you install Miniconda instead of Anaconda,
-you need to install required packages manually in the following way:
+If successful, the text `(base)` in your terminal prompt will now read
+`(geospatial)` indicating that you are now in the Anaconda virtual environment
+named `geospatial`. The command `which python` should confirm that we're using
+the Python installation in the `geospatial` virtual environment. For example:
 
 ```bash
-conda install -y numpy pandas matplotlib jupyter
-conda install -c conda-forge plotnine
+which python
 ```
 
-### *(Alternative)* Installing required packages with environment file
+```output
+/Users/your-username/anaconda3/envs/geospatial/bin/python
+```
 
-Download the
-[environment.yml](../episodes/files/environment.yml)
-file by right-clicking the link and selecting save as.
-In the directory where you downloaded the environment.yml file run:
+IMPORTANT: If you close the terminal, you will need to reactivate this
+environment with `conda activate geospatial` to use the Python libraries
+required for the lesson and to start JupyterLab, which is also installed in the
+`geospatial` environment.
+
+### Starting JupyterLab
+
+In order to follow the lesson, you should launch JupyterLab. After activating the
+geospatial conda environment, enter the following command in your terminal (use the **Anaconda prompt** on **Windows**):
 
 ```bash
-conda env create -f environment.yml
+jupyter lab
 ```
-
-Activate the new environment with:
-
-```bash
-conda activate python-ecology-lesson
-```
-
-You can deactivate the environment with:
-
-```bash
-conda deactivate
-```
-
-## Launch a Jupyter notebook
-
-After installing either Anaconda or Miniconda and the workshop packages,
-launch a Jupyter notebook by typing this command into the *terminal* or *anaconda-prompt*:
-
-```bash
-jupyter notebook
-```
-
 The notebook should open automatically in your browser. If it does not or you
 wish to use a different browser, open this link: [http://localhost:8888](https://localhost:8888).
 
@@ -205,6 +194,47 @@ wish to use a different browser, open this link: [http://localhost:8888](https:/
 ## Leave terminal used to launch Jupyter open
 
 Jupyter depends on a server running in the background associated with the window used to launch it. Closing that window will results in web interface errors in the web interface. When done, you can either close the terminal or shut down the server using <kbd>CTRL</kbd>+<kbd>C</kbd> and submitting <kbd>y</kbd> within 5 seconds if the terminal is needed for other tasks.
+
+Now reopen JupyterLab, create a new Python 3 notebook, type the following code snippet in a cell and press the "Play" button:
+
+```python
+import rioxarray
+```
+
+If all the steps above completed successfully you are ready to follow along with the lesson!
+
+
+### Troubleshooting `conda: command not found`
+
+* **Mac OS and Linux users:**
+
+  1. First, find out where Anaconda is installed.
+
+     The typical install location is in your `$HOME` directory (i.e., `/Users/your-username/`) so use `ls ~` to check whether an `anaconda3` directory is present in your home directory:
+
+     ```bash
+     ls ~
+     ```
+
+     ```output
+     Applications      Downloads       Pictures
+     anaconda3         Library         Public
+     Desktop           Movies
+     Documents         Music
+     ```
+
+     If, like above, you see a directory called `anaconda3` in the output we're in good shape. If not, **contact the instructor for help**.
+
+  2. Activate the `conda` command-line program by entering the following command:
+
+     ```bash
+     source ~/anaconda3/bin/activate
+     ```
+     If all goes well, nothing will print to the terminal and your prompt will now have `(base)` floating around somewhere
+     on the left. This is an indication that you are in the base Anaconda environment.
+
+     Continue from the beginning of step 3 to complete the creation of the `geospatial` virtual environment.
+
 
 ::::::::::::::::::::
 
@@ -214,6 +244,9 @@ For a brief introduction to Jupyter Notebooks, please consult our
 [python]: https://www.python.org/
 [anaconda]: https://www.anaconda.com/
 [jupyter]: https://jupyter.org/
-
-
-
+[anaconda]: https://www.anaconda.com/
+[anaconda-mac]: https://www.anaconda.com/download/#macos
+[anaconda-linux]: https://www.anaconda.com/download/#linux
+[anaconda-windows]: https://www.anaconda.com/download/#windows
+[video-mac]: https://www.youtube.com/watch?v=TcSAln46u9U
+[video-windows]: https://www.youtube.com/watch?v=xxQ0mzZ8UvA
