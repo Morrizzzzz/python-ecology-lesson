@@ -1,6 +1,6 @@
 ## Introduction to Python Lesson
 
-This repository contains provides an introduction to python for students that participate in the [Geographic Information Sciences Master](https://vu.nl/en/education/master/geographical-information-sciences) 
+This repository provides an introduction to python for students that participate in the [Geographic Information Sciences Master](https://vu.nl/en/education/master/geographical-information-sciences) 
 program at the Vrije Universiteit Amsterdam. The lesson started as a fork from the [python-ecology-lesson](https://github.com/datacarpentry/python-ecology-lesson), 
 but has been completely modified to provide a self study lesson for students that will take part 
 of workshop 1 where students are introduced to work with python for [geospatial vector and raster data](https://esciencecenter-digital-skills.github.io/geospatial-python/).  
